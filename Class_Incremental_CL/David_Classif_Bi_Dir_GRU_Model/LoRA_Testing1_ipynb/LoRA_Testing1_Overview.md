@@ -40,7 +40,7 @@ This document summarizes experiments on LoRA (Low-Rank Adaptation) implementatio
 
 ## LoRA DynEx_CLoRA (Improvements)
 
-![alt text](img/overview/DynEx_CLoRA(Improvements).png)
+![alt text](../img/overview/DynEx_CLoRA(Improvements).png)
 
 ### Overview
 - **Versions**: LoRA v2 to v10
@@ -48,7 +48,7 @@ This document summarizes experiments on LoRA (Low-Rank Adaptation) implementatio
 
 ### Strategy (Period 2+ Scenarios)
 1. **Calculate Similarity**: Cosine similarity between new and old class features:
-![alt text](img/overview/Calculate%20Similarity.png)
+![alt text](../img/overview/Calculate%20Similarity.png)
    - *New Class*: Current period distribution.
    - *Existing Class*: Previous period distribution.
 2. **Old Classes (excl. Class 0)**: Update related networks based on self-similarity.
@@ -90,7 +90,7 @@ This document summarizes experiments on LoRA (Low-Rank Adaptation) implementatio
 
 ## Current Conclusion
 - **Best Logic**: Logic 1 slightly outperforms Logic 2.
-- **Optimal Threshold**: 0.3–0.5.
+- **Optimal Threshold**: 0.0
 - **Best Rank**: 4.
 - **Efficiency**: 1.5x faster training per period vs. full training.
 - **Forgetting**: Slightly mitigates Class 0 forgetting, stable despite minor new-class trade-offs.
